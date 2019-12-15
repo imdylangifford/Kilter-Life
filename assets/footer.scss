@@ -1,0 +1,46 @@
+.c-footer {
+    background-color: #8a946c;
+    padding: 20px 15px;
+
+    & > p:first-of-type {
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        padding-bottom: 10px;
+    }
+
+    .disclaimer {
+        text-align: center;
+        font-size: 10px;
+        padding: 5px 15px;
+        font-size: 12px;
+        line-height: 1.2em;
+        opacity: 0.8;
+    }
+
+    p,h2 {
+        color: white;
+    }
+
+    & > div:first-of-type {
+        margin-top: 10px;
+        p {            
+            padding: 0px 15px;
+        }
+
+        p:first-of-type {
+            border-right: 2px solid white;
+        }
+    }
+
+    & > div:nth-of-type(2) {
+        margin-top: 10px;
+        width: 100%;
+        a {
+            margin: 10px 5px;
+        }
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}

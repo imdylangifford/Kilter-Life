@@ -1,0 +1,56 @@
+<div id="slideout" class="c-hp--slideout flex jc">
+    <div id="slideout-c" class="slideout-c flex-c ai">
+        <a href="/pages/shop">Shop</a>
+        <a href="">Quality</a>
+        <a href="/pages/learn">Learn</a>
+        <a href="/pages/help">Help</a>
+        <p> * Representations regarding the efficacy and safety of Kilter Life have not been evaluated by the Food and Drug Administration. The FDA only evaluates foods and drugs, not supplements like this product. This product is not intended to diagnose, prevent, treat, or cure any disease. Click here, here, and here for research describing the benefits, performance, and efficacy of CBD based on the expertise of relevant professionals.</p>
+        <p>All Products contain less then 0.3% THC and are legal in all 50 states.</p>
+    </div>
+</div>
+<div class="c-header flex">
+    <p  onclick="closeNav()" id="x">X</p>
+    <img onclick="openNav()" id="hamburger" src="https://ucarecdn.com/9c1349b6-a4f5-437d-9105-4d3dc081f18e/hamburgericon.png" alt="">
+    <a href="/"><h2 class="kilter">Kilter Life</h2></a>
+    <img onclick="openCart()" src="https://ucarecdn.com/9a2f6e32-2f2a-4030-aa5b-2cee198de212/shoppingcart.svg" alt="">
+</div>
+
+<script>
+function openNav() {
+  document.getElementById('hamburger').style.display = 'none';
+  document.getElementById('x').style.display = 'block';
+  document.getElementById('slideout').style.width = `${window.innerWidth}px`;
+  $('.c-header').removeClass('dark-header')
+  setTimeout(function(){
+    document.getElementById('slideout-c').style.display = 'flex';
+  }, 200);
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById('hamburger').style.display = 'block';
+  document.getElementById('x').style.display = 'none';
+  document.getElementById('slideout').style.width = "0";
+  document.getElementById('slideout-c').style.display = 'none';
+  if(window.location.href.includes('shop')) {
+      $('.c-header').addClass('dark-header')
+  }
+}
+
+
+function openCart() {
+    $('.slideout-cart-cover').addClass("slide-opacity-cover");
+    $('.c-slideout-cart').addClass("openCart");
+    $('.close-cart').css('display', 'block')
+}
+function closeCart() {
+    $('.slideout-cart-cover').removeClass("slide-opacity-cover");
+    $('.c-slideout-cart').removeClass("openCart");
+    $('.close-cart').css('display', 'none')
+}
+</script>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>

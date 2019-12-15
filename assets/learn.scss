@@ -1,0 +1,281 @@
+.c-learn {
+    background-color: #ede4d9;
+
+    h2 {
+        margin: 0 auto;
+        color: #8a946c;
+        font-size: 30px;
+        padding: 15px 0px;
+    }
+
+    .c-header {
+        h2 {
+            color: white;
+        }
+    }
+}
+
+.light-6 {
+    opacity: 0.6;
+}
+
+.c-learn--hero {
+    background-image: url('https://ucarecdn.com/69c1f973-2436-4e60-bfe5-e3972dba3581/DSC066441.jpg');
+    width: 100%;
+    height: 400px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+    
+
+    & > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.6);
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    h2,p {
+        position: relative;
+        z-index: 5;
+        line-height: 1.5em;
+        text-align: center;
+        padding: 0px 15px;
+    }
+}
+    
+.c-learn--how {
+    text-align: center;
+    margin-top: 35px;
+    position: relative;
+
+    p:first-of-type {
+        color: black;
+        opacity: 0.8;
+        font-weight: bold;
+    }
+
+    p:last-of-type {
+        color: black;
+        opacity: 0.6;
+        padding: 0px 15px;
+        line-height: 1.5em;
+    }
+
+    img {
+        margin-top: 25px;
+        max-width: 250px;
+        margin-bottom: -4px;
+        filter: invert(88%) sepia(100%) saturate(0%) hue-rotate(126deg) brightness(107%) contrast(101%);
+    }
+
+    & > div {
+        position: relative;
+    }
+
+
+    .color-dot {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+
+        -webkit-animation: flickerAnimation 2s infinite;
+        -moz-animation: flickerAnimation 2s infinite;
+        -o-animation: flickerAnimation 2s infinite;
+         animation: flickerAnimation 2s infinite;
+    }
+
+    .dot-1 {
+        top: 45px;
+        left: 112px;
+        background-color: #e2c7a2;
+        border: 3px solid #eaad59;
+    }
+
+    .dot-2 {
+        background-color: #d3a38c;
+        border: 3px solid #de8052;
+        bottom: 180px;
+        left: 28px;
+        animation-delay: .5s;
+    }
+
+    .dot-3 {
+        background-color: #ccd2dd;
+        border: 3px solid #abbddd;
+        animation-delay: 1s;
+        right: -5px;
+        bottom: 0px;  
+    }
+
+    .dot-4 {
+        border: 3px solid #ddb0a7;
+        background-color: #ddcac6;
+        left: 45px;
+        bottom: 86px;
+        animation-delay: 1.5s;
+    }
+
+    .dot-5 {
+        border: 3px solid #8a946c;
+        background-color: #e0e6cf;
+        animation-delay: 1.15s;
+        top: 190px;
+        right: 55px;
+    
+    }
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-o-keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-moz-keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-webkit-keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+
+
+  .c-learn--vs {
+      text-align: center;
+      padding: 35px 15px;
+      background-color: white;
+    
+    p:first-of-type {
+        opacity: 0.8;
+        font-weight: bold;
+        margin-bottom: 0px;
+    }
+
+
+    p {
+        color: black;
+        line-height: 1.5em;
+        margin-bottom: 10px;
+        padding: 0px 15px;
+    }
+
+    & > div {
+        flex-wrap: wrap;
+        padding-bottom: 0px 20px;
+
+
+            div:nth-of-type(1) {
+                p {
+                    animation-delay: .5s;
+                }
+            }
+            div:nth-of-type(2) {
+                p {
+                    animation-delay: 1.5s;
+                }
+            }
+            div:nth-of-type(3) {
+                p {
+                    animation-delay: 2.5s;
+                }
+            }
+            div:nth-of-type(4) {
+                p {
+                    animation-delay: 3s;
+                }
+            }
+            div:nth-of-type(5) {
+                p {
+                    animation-delay: 3.5s;
+                }
+            }
+            div:nth-of-type(6) {
+                p {
+                    animation-delay: .75s;
+                }
+            }
+
+        & > div {
+            background-image: url('https://ucarecdn.com/3b71f437-2e0d-4f46-bfd8-aa2ebca614a1/hexagon.svg');
+            width: 60px;
+            height: 60px;
+            margin: 5px 10px;
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+
+            p {
+                margin-bottom: 0px;
+                color: #8a946c;
+                font-weight: initial;
+                -webkit-animation: flickerAnimation 4s infinite;
+                -moz-animation: flickerAnimation 4s infinite;
+                -o-animation: flickerAnimation 4s infinite;
+                 animation: flickerAnimation 4s infinite;
+            }
+
+        }
+    }
+
+  }
+
+
+.c-learn--tincture {
+    padding: 35px 0px;
+
+    h2,p {
+        text-align: center;
+    }
+
+    p:first-of-type {
+        color: black;
+        opacity: 0.8;
+        font-weight: bold;
+        margin: 0 auto;
+    }
+
+    p:last-of-type {
+        color: black;
+        opacity: 0.6;
+        padding: 0px 30px;
+        line-height: 1.5em;
+        padding-bottom: 20px;
+    }
+
+
+
+}
+
+.c-learn--article {
+    padding: 35px 15px;
+    background-color: white;
+
+    div {
+        padding: 20px 0px;
+
+        p {
+            color: black;
+            opacity: 0.6;
+            padding: 0px 15px;
+            line-height: 1.5em;
+            padding-top: 15px;
+            text-align: center;
+        }
+    }
+}

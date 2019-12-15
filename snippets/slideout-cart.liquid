@@ -1,0 +1,57 @@
+{% raw %}
+
+<div class="c-slideout-cart" id="slideout-cart">
+    <div class="c-slideout-cart-wrap">
+        <div onclick="closeCart()" class="close-cart">X</div>
+        <div v-if="items.length > 0" class="cart-contents-wrapper">
+            <div class="c-cart--checkout">
+                <div>
+                    <img class="secure"
+                        src="https://trustlock.co/wp-content/uploads/2019/01/guaranteed-safe-checkout-14.png" alt="">
+                    <div>
+                        <p><span>Shipping:</span> FREE🎉</p>
+                        <p><span>Subtotal:</span>${{ formatCurrency(total) }}</p>
+                    </div>
+                </div>
+                <a href="/checkout">Go To Checkout</a>
+            </div>
+            <div class="items-container">
+                <div class="c-item-block" v-for="(item, index) in items">
+                    <div class="cart-item">
+                        <div class="cart-item-left">
+                            <div class="cart-item-img">
+                                <img v-bind:src="item.image" alt="">
+                            </div>
+                            <div class="item-title">
+                                <h3>Kilter {{ item.product_title }}</h3>
+                                <p>Broad-Spectrum Hemp CBD Oil</p>
+                                <p>400MG</p>
+                                <p class="mobile-price">${{ formatCurrency(item.price * item.quantity) }}</p>
+                                <div class="cart-buttons">
+                                    <div v-on:click="minusOne(index, 'misc')">&#x2212;</div>
+                                    <div>
+                                        <p>{{ item.quantity }}</p>
+                                    </div>
+                                    <div v-on:click="addOne(index, 'misc')">&#x2b;</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item-details">
+                            <div class="c-item--price">
+                                <p>${{ formatCurrency(item.price * item.quantity) }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-else class="cart-empty">
+            <h2>Your cart is empty</h2>
+        </div>
+    </div>
+</div>
+{% endraw %}
+
+
+{% comment %} Logic for slideout cart in cart.js and the top of /sections/header.liquid in the script at the bottom
+{% endcomment %}

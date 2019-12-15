@@ -1,0 +1,39 @@
+<div id="shop" class="c-shop">
+    {% include 'header' %}
+    {% raw %}
+    <div v-if="activeProduct.images" class="c-shop--prod flex-c jcai">
+        <p class="light">{{ getTagline(activeProduct.title) }}</p>
+        <p class='recommend light'>We Recommend</p>
+        <img v-bind:src="activeProduct.images[0].src" alt="">
+        <div class="c-shop--prod-info flex-c jcai">
+
+            <p class="c-shop--prod-info--title">Kilter {{ activeProduct.title }}</p>
+            <p class="c-shop--prod-info--desc light">{{ activeProduct.body_html }}</p>
+            <div class="reviews">
+                <span class="shopify-product-reviews-badge" v-bind:data-id="activeProduct.id"></span>
+            </div>
+            <p><span>400MG</span><span>$54.99</span></p>
+            <button v-on:click="addToCart()" v-bind:class="getAccent(activeProduct.title)" class="c-shop--prod-info--atc">Add {{activeProduct.title }} To Cart</button>
+        </div>
+        <div class="c-shop--details flex-c jcai">
+            <p>Shop Other Products</p>
+            <div class="c-shop--details-other flex">
+                <div v-on:click="optionClick(product.title)" v-if="product.title != activeProduct.title" v-bind:class="getAccent(product.title)" class="c-shop--details-box flex jcai" v-for="product in products">
+                    <p>{{ product.title }}</p>
+                    <img v-bind:src="getIcon(product.title)" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endraw %}
+</div>
+
+<script src="{{ 'hp-shop.js' | asset_url }}" defer="defer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<script>
+ $('.c-header').addClass('dark-header')
+</script>

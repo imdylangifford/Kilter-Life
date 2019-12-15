@@ -1,0 +1,136 @@
+html {
+    height: 100%;
+    max-width: 100%;
+  }
+  body {
+    min-height: 100%;
+    max-width: 100%;
+  }
+
+.c-help {
+    box-sizing: border-box;
+
+    h2,p {
+        color: black;
+
+    }
+}
+
+.c-help--top {
+    background-color: #ede4d9;
+    padding: 100px 10px 40px 10px;
+
+    text-align: center;
+    h2 {
+        font-size: 36px;
+        line-height: 1.2em;
+        opacity: 0.8;
+    }
+    
+    & > p {
+        margin-top: 20px;
+    }
+
+    p {
+        opacity: 0.6;
+        line-height: 1.2em;
+
+        a {
+            color: black;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}
+
+.c-help--top-boxes {
+    a {
+        margin: 30px 10px 0px 10px;
+        padding: 15px 25px;
+        background-color: white;
+        box-shadow: 0 -1px 7px rgba(0,0,0,0.07);
+
+        &:hover {
+            border: 1px solid #8a946c;
+        }
+
+        h2 {
+            color: #8a946c;
+            font-size: 18px;
+            opacity: 0.8;
+            padding-bottom: 15px;
+        }
+
+        p {
+            opacity: 0.6;
+            font-size: 16px;
+            color: black;
+        }
+    }
+}
+
+.c-faq {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px 25px;
+    padding-bottom: 50px;
+
+    & > h2 {
+        font-size: 36px;
+        text-align: center;
+        padding: 40px 0px;
+        opacity: 0.8;
+    }
+}
+
+.panel {
+    padding: 0 18px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    font-family: 'Avenir';
+    color: black;
+    opacity: 0.6;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    p {
+        line-height: 1.2em;
+    }
+  }
+
+.accordion {
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'Avenir';
+    opacity: 0.8;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #8a946c;
+    padding-bottom: 8px;
+    position: relative;
+
+    p {
+        max-width: 80%;
+        color: #8a946c;
+    }
+
+    &::before {
+            position: absolute;
+            right: 5px;
+            content: '';
+            width: 0; 
+            height: 0; 
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            
+            border-top: 5px solid #8a946c;
+    }
+}
+
+.upArrow {
+    &::before {
+        border-top: 0px !important;
+        border-bottom: 5px solid #8a946c !important;
+    }
+}
