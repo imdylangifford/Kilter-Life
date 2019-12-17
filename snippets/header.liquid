@@ -4,8 +4,6 @@
         <a href="">Quality</a>
         <a href="/pages/learn">Learn</a>
         <a href="/pages/help">Help</a>
-        <p> * Representations regarding the efficacy and safety of Kilter Life have not been evaluated by the Food and Drug Administration. The FDA only evaluates foods and drugs, not supplements like this product. This product is not intended to diagnose, prevent, treat, or cure any disease. Click here, here, and here for research describing the benefits, performance, and efficacy of CBD based on the expertise of relevant professionals.</p>
-        <p>All Products contain less then 0.3% THC and are legal in all 50 states.</p>
     </div>
 </div>
 <div class="c-header flex">
@@ -21,6 +19,7 @@ function openNav() {
   document.getElementById('x').style.display = 'block';
   document.getElementById('slideout').style.width = `${window.innerWidth}px`;
   $('.c-header').removeClass('dark-header')
+  $('.c-header').addClass('open-header')
   setTimeout(function(){
     document.getElementById('slideout-c').style.display = 'flex';
   }, 200);
@@ -32,7 +31,8 @@ function closeNav() {
   document.getElementById('x').style.display = 'none';
   document.getElementById('slideout').style.width = "0";
   document.getElementById('slideout-c').style.display = 'none';
-  if(window.location.href.includes('shop')) {
+  $('.c-header').removeClass('open-header');
+  if(window.location.href.includes('shop') || window.location.href.includes('help') ) {
       $('.c-header').addClass('dark-header')
   }
 }

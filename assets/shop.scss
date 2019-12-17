@@ -15,6 +15,9 @@
     h2 {
         color: black;
     }
+    p {
+        color: black !important;
+    }
     img {
         filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(327deg) brightness(112%) contrast(100%);
     }
@@ -287,4 +290,17 @@
         border-radius: 8px;
         width: 100%;
     }
+  }
+
+
+  @media only screen and (min-width: 950px) {
+      .c-shop--whys {
+          display: flex;
+          justify-content: center;
+
+
+          & > div {
+              margin: 0px 60px;
+          }
+      }
   }

@@ -77,17 +77,6 @@
     }
 }
 
-.hp-shop {
-    width: 80%;
-    img {
-        max-width: 120px;
-    }
-}
-.hp-shop--info {
-    position: initial;
-    z-index: 1;
-}
-
 .c-hp--text {
     padding: 20px;
 
@@ -200,6 +189,12 @@
         }
 }
 
+.open-header {
+    p,h2 {
+        color: white !important;
+    }
+}
+
 .c-header {
     position: absolute;
     justify-content: space-between;
@@ -209,6 +204,14 @@
     padding: 0px 25px;
     left: 0;
     box-sizing: border-box;
+
+    p {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
 
     h2 {
         font-size: 40px;

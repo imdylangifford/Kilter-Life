@@ -256,6 +256,7 @@
         padding: 0px 30px;
         line-height: 1.5em;
         padding-bottom: 20px;
+        margin: 0 auto;
     }
 
     img {
@@ -281,3 +282,51 @@
         }
     }
 }
+
+
+@media only screen and (min-width: 950px) {
+    .c-learn {
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 1000px;
+        }
+    }
+
+    .c-learn--hero {
+        height: 550px;
+      h2 {
+          font-size: 60px;
+      }
+
+      p {
+          max-width: 800px;
+          font-size: 24px;
+      }
+    }
+
+    .c-learn--how {
+        p {
+            font-size: 20px;
+            max-width: 1000px;
+        }
+    }
+
+    .c-learn--vs {
+        & > div {
+            & > div {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    .c-learn--tincture {
+        img {
+            width: 65%;
+        }
+    }
+  }
