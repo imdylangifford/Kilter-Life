@@ -248,6 +248,17 @@
         margin: 0px 15px;
     }
 
+    .slider-img-text {
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .slick-active {
+        .slider-img-text {
+            opacity: 1.0;
+        }
+    }
+
     & > h2 {
         text-align: center;
         color: #8a946c;
