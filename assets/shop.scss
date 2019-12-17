@@ -48,10 +48,11 @@
         margin-bottom: 20px;
     }
 }
-
+ 
 
 .c-shop--whys {
     padding: 30px 25px;
+    padding-top: 50px;
     box-sizing: border-box;
     background-color: white;
     width: 100%;
@@ -93,6 +94,8 @@
 
 
 .c-shop--pr {
+    padding-top: 5px;
+    flex-direction: column;
     a {
         color: black;
     }
@@ -234,12 +237,12 @@
 
 
   .center {
-    padding-top: 30px;
+      background-color: #fff;
     font-family:Arial;
     display: block;
     margin:0 auto;
     box-sizing: border-box;
-    margin-bottom: 70px;
+    padding-bottom: 30px;
 
     .slick-slide {
         margin: 0px 15px;
@@ -247,11 +250,10 @@
 
     & > h2 {
         text-align: center;
-        color: black;
+        color: #8a946c;
         font-size: 32px;
         padding-bottom: 20px;
         font-family: 'Roboto Slab';
-        opacity: 0.6;
     }
 
     .slider {
@@ -303,4 +305,18 @@
               margin: 0px 60px;
           }
       }
+
+      .c-shop--pr {
+          padding-top: 0px;
+          flex-direction: initial;
+      }
+
+      .spr-review-content-body {
+          font-size: 18px !important;
+      }
+  }
+
+
+  .spr-container {
+      border: none !important
   }

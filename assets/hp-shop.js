@@ -51,12 +51,16 @@ var shopPage = new Vue({
             if(title !== undefined){
                 if(title.includes('Peace')){
                     this.activeProduct = this.products[0]
+                    window.location.hash="#Peace"
                 } else if(title.includes('Sleep')){
                     this.activeProduct = this.products[1]
+                    window.location.hash="#Sleep"
                 } else if(title.includes('Focus')){
                     this.activeProduct = this.products[2]
+                    window.location.hash="#Focus"
                 } else {
                     this.activeProduct = this.products[3]
+                    window.location.hash="#Comfort"
                 }
             }
             this.updateReviews()
@@ -93,17 +97,13 @@ var shopPage = new Vue({
         axios.get('https://kilterlife.myshopify.com/collections/tinctures/products.json')
         .then( response => {
             this.products = response.data.products;
-            if(window.location.href.includes('anxiety')){
+            if(window.location.href.includes('Peace')){
                 this.activeProduct = this.products[0]
-                window.location.hash="anxiety"
-            }else if(window.location.href.includes('sleep')){
-                window.location.hash="sleep"
+            }else if(window.location.href.includes('Sleep')){
                 this.activeProduct = this.products[1]
-            }else if(window.location.href.includes('focus')){
-                window.location.hash="focus"
+            }else if(window.location.href.includes('Focus')){
                 this.activeProduct = this.products[2]
             } else {
-                window.location.hash="comfort"
                 this.activeProduct = this.products[3]
             }
             this.updateReviews();

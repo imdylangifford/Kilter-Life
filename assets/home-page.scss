@@ -138,27 +138,27 @@
 }
 
 .c-hp--link-sleep {
-    border: 1px solid #ddb0a7;
+    border: 2px solid #ddb0a7;
     &:hover {
-        background-color: #ddb0a7;
+        background-color: #ddb0a7 !important;
     }
 }
 .c-hp--link-focus {
-    border: 1px solid #eaad59;
+    border: 2px solid #eaad59;
     &:hover {
-        background-color: #eaad59;
+        background-color: #eaad59 !important;
     }
 }
 .c-hp--link-comfort {
-    border: 1px solid #de8052;
+    border: 2px solid #de8052;
     &:hover {
-        background-color: #de8052;
+        background-color: #de8052 !important;
     }
 }
 .c-hp--link-peace {
-    border: 1px solid #abbddd;
+    border: 2px solid #abbddd;
     &:hover {
-        background-color: #abbddd;
+        background-color: #abbddd !important;
     }
 }
 
@@ -172,7 +172,7 @@
         border-radius: 5px;
         width: 100%;
         max-width: 1200px;
-        border: 1px solid #8a946c;
+        border: 2px solid #8a946c;
 
         &:hover {
             background-color: #8a946c;

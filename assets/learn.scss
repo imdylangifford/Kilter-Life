@@ -330,3 +330,74 @@
         }
     }
   }
+
+
+
+
+  //help css
+
+  .c-quality {
+    .c-hp--links {
+        margin: 0 auto;
+        margin-top: 10px;
+        & > div {
+            a {
+                background-color: white;
+                p {
+                    color: black;
+                }
+
+                img {
+                    filter: none;
+                }
+            }
+        }
+    }
+  }
+
+.c-quality--hero {
+    background-image: url('https://ucarecdn.com/a51555ac-8156-4f57-93e0-0a83f5737c26/forestmountainsfogclouds9754.jpg');
+    width: 100%;
+    height: 400px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    position: relative;
+    text-align: center;
+
+    & > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.6);
+    }
+
+    h2 {
+        z-index: 5;
+        font-size: 32px;
+        padding-bottom: 20px;
+    }
+
+    p {
+        z-index: 5;
+        font-size: 18px;
+        line-height: 1.5em;
+        max-width: 800px;
+        padding: 0px 19px;
+    }
+}
+
+.c-quality--info {
+    text-align: center;
+    padding: 40px 20px;
+
+    h2 {
+        font-size: 31px;
+        color: black;
+        opacity: 0.8;
+        line-height: 1.2em;
+    }
+
+}
+
+
