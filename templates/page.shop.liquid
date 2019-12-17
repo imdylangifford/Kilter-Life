@@ -1,32 +1,77 @@
-<div id="shop" class="c-shop">
+<div class="c-shop">
     {% include 'header' %}
     {% raw %}
-    <div v-if="activeProduct.images" class="c-shop--prod flex-c jcai">
-        <p class="light">{{ getTagline(activeProduct.title) }}</p>
-        <p class='recommend light'>We Recommend</p>
-        <img v-bind:src="activeProduct.images[0].src" alt="">
-        <div class="c-shop--prod-info flex-c jcai">
-
-            <p class="c-shop--prod-info--title">Kilter {{ activeProduct.title }}</p>
-            <p class="c-shop--prod-info--desc light">{{ activeProduct.body_html }}</p>
-            <div class="reviews">
-                <span class="shopify-product-reviews-badge" v-bind:data-id="activeProduct.id"></span>
-            </div>
-            <p><span>400MG</span><span>$54.99</span></p>
-            <button v-on:click="addToCart()" v-bind:class="getAccent(activeProduct.title)" class="c-shop--prod-info--atc">Add {{activeProduct.title }} To Cart</button>
+    <div id="shop" v-if="activeProduct.images" class="c-shop--prod flex-c jcai">
+        <div class="c-shop--img flex-c jcai">
+            <p class="light">{{ getTagline(activeProduct.title) }}</p>
+            <p class='recommend light'>We Recommend</p>
+            <img v-bind:src="activeProduct.images[0].src" alt="">
         </div>
-        <div class="c-shop--details flex-c jcai">
-            <p>Shop Other Products</p>
-            <div class="c-shop--details-other flex">
-                <div v-on:click="optionClick(product.title)" v-if="product.title != activeProduct.title" v-bind:class="getAccent(product.title)" class="c-shop--details-box flex jcai" v-for="product in products">
-                    <p>{{ product.title }}</p>
-                    <img v-bind:src="getIcon(product.title)" alt="">
+        <div class="c-shop--prod-info">
+            <div class="c-shop--prod-info flex-c jcai">
+                <p class="c-shop--prod-info--title">Kilter {{ activeProduct.title }}</p>
+                <p class="c-shop--prod-info--desc light">{{ activeProduct.body_html }}</p>
+                <div class="c-shop--pr flex jcai">
+                    <p><span>400MG</span><span>$54.99</span></p>
+                    <a href="#shopify-product-reviews" class="reviews">
+                        <span class="shopify-product-reviews-badge" v-bind:data-id="activeProduct.id"></span>
+                    </a>
+                </div>
+                <button v-on:click="addToCart()" v-bind:class="getAccent(activeProduct.title)"
+                    class="c-shop--prod-info--atc">Add {{activeProduct.title }} To Cart</button>
+            </div>
+            <div class="c-shop--details flex-c jcai">
+                <p>Shop Other Products</p>
+                <div class="c-shop--details-other flex">
+                    <div v-on:click="optionClick(product.title)" v-if="product.title != activeProduct.title"
+                        v-bind:class="getAccent(product.title)" class="c-shop--details-box flex jcai"
+                        v-for="product in products">
+                        <p>{{ product.title }}</p>
+                        <img v-bind:src="getIcon(product.title)" alt="">
+                    </div>
                 </div>
             </div>
         </div>
+        {% endraw %}
     </div>
-
-    {% endraw %}
+    <div class="c-shop--whys">
+        {% comment %} <h2>Why Kilter Life?</h2> {% endcomment %}
+        <div class="c-shop--whys-block flex ai ">
+            <img src="https://ucarecdn.com/8d90f795-052b-40f8-9330-fa4f4b15f05b/iconfinder_x12_2046239.svg" alt="">
+            <div class="">
+                <h2>A Happiness Gurantee</h2>
+                <p>Don't feel better? We've got you covered</p>
+            </div>
+        </div>
+        <div class="c-shop--whys-block flex ai ">
+            <img src="https://ucarecdn.com/f338c754-42e3-4f36-a3d8-bb25fc9f681e/iconfinder_express_2168617.svg" alt="">
+            <div class="">
+                {% raw %}
+                <h2>Fast & Free Shipping</h2>
+                <p>CBD to your door in less than 7 days</p>
+                {% endraw %}
+            </div>
+        </div>
+        <div class="c-shop--whys-block flex ai ">
+            <img src="https://ucarecdn.com/c14e2d7f-b4c4-47ea-a43f-a1831672574b/iconfinder_33environment__leaf_green_252578.svg" alt="">
+            <div class="">
+                <h2>All Natural Ingredients</h2>
+                <p>Grown ethically right here in the US</p>
+            </div>
+        </div>
+        <div class="c-shop--whys-block flex ai ">
+            <img src="https://ucarecdn.com/630efbe9-231b-41f6-8767-3ac5988fb1a5/iconfinder_lavalampdecorationobject_3995338.svg" alt="">
+            <div class="">
+                <h2>Absolutely No High</h2>
+                <p>Get the help without the high</p>
+            </div>
+        </div>
+    </div>
+    {% include 'image-swipe' %}
+    <div class="reviews-list">
+        <div id="shopify-product-reviews" data-id="">{{ product.metafields.spr.reviews }}</div>
+    </div>
+    {% include 'footer' %}
 </div>
 
 <script src="{{ 'hp-shop.js' | asset_url }}" defer="defer"></script>
@@ -35,5 +80,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 
 <script>
- $('.c-header').addClass('dark-header')
+    $('.c-header').addClass('dark-header')
+
+
 </script>

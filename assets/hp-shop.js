@@ -59,6 +59,7 @@ var shopPage = new Vue({
                     this.activeProduct = this.products[3]
                 }
             }
+            this.updateReviews()
         },
         addToCart: function(){
             axios.post('/cart/add.js', {
@@ -70,6 +71,22 @@ var shopPage = new Vue({
                 openCart();
                 console.log('cart response', response)
             })
+        },
+        updateReviews: function(){
+            var reviewsBadge = `<span class="shopify-product-reviews-badge" data-id="${this.activeProduct.id}"></span>`
+            var reviewsList = `<div id="shopify-product-reviews" data-id="${this.activeProduct.id}"></div>`
+            $('.reviews').children().remove()
+            $('.reviews').append(reviewsBadge)
+            $('.reviews-list').children().remove()
+            $('.reviews-list').append(reviewsList)
+            setTimeout(function(){
+                console.log('i ran 2')
+                SPR.registerCallbacks();
+                SPR.initRatingHandler();
+                SPR.initDomEls();
+                SPR.loadProducts();
+                SPR.loadBadges();
+            }, 100)
         }
     },
     mounted() {
@@ -78,20 +95,18 @@ var shopPage = new Vue({
             this.products = response.data.products;
             if(window.location.href.includes('anxiety')){
                 this.activeProduct = this.products[0]
+                window.location.hash="anxiety"
             }else if(window.location.href.includes('sleep')){
+                window.location.hash="sleep"
                 this.activeProduct = this.products[1]
             }else if(window.location.href.includes('focus')){
+                window.location.hash="focus"
                 this.activeProduct = this.products[2]
             } else {
+                window.location.hash="comfort"
                 this.activeProduct = this.products[3]
             }
-            setTimeout(function(){
-                SPR.registerCallbacks();
-                SPR.initRatingHandler();
-                SPR.initDomEls();
-                SPR.loadProducts();
-                SPR.loadBadges();
-            }, 500)
+            this.updateReviews();
         })
     }
 })

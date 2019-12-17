@@ -42,26 +42,20 @@ var slideout = new Vue({
         },
         addOne: function(index, type){
             var slide = this;
-            if(type == "misc"){
-                var item = this.misc[index];
-            } else {
-                var item = this.pints[index];
-            }
+            var item = this.items[index]
             item.quantity++;
-            this.showSpinner = true;
             axios.post('/cart/add.js', {
                 quantity: 1,
                 id: item.variant_id,
             })
             .then(response => {
-                this.updateCart();
+                slide.updateCart();
             })
         },
         minusOne: function(index, type){
             var slide = this;
             var item = this.items[index]
             item.quantity--;
-            this.showSpinner = true;
             let data = {}
             data[item.variant_id] = item.quantity;
             axios.post('/cart/update.js', {updates: data})
