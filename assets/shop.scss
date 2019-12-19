@@ -331,3 +331,17 @@
   .spr-container {
       border: none !important
   }
+
+  .fs-bar {
+      margin-bottom: 10px;
+      p {
+          line-height: 1.5em;
+      }
+  }
+
+  .c-header {
+      margin-top: -5px;
+      & > div:nth-of-type(2) {
+          justify-content: space-between;
+      }
+  }
