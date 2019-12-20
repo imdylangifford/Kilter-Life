@@ -139,3 +139,29 @@ button {
 }
 
 
+.c-header {
+    margin-top: -5px;
+    & > div:nth-of-type(2) {
+        justify-content: space-between;
+    }
+}
+
+.fs-bar {
+    margin-bottom: 10px;
+    text-align: center;
+    p {
+        line-height: 1.5em;
+    }
+}
+
+.dark-header {
+    h2 {
+        color: black;
+    }
+    p {
+        color: black !important;
+    }
+    img {
+        filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(327deg) brightness(112%) contrast(100%);
+    }
+}
