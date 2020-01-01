@@ -73,7 +73,6 @@ var shopPage = new Vue({
             .then(response => {
                 slideout.updateCart();
                 openCart();
-                console.log('cart response', response)
             })
         },
         updateReviews: function(){
@@ -84,7 +83,6 @@ var shopPage = new Vue({
             $('.reviews-list').children().remove()
             $('.reviews-list').append(reviewsList)
             setTimeout(function(){
-                console.log('i ran 2')
                 SPR.registerCallbacks();
                 SPR.initRatingHandler();
                 SPR.initDomEls();

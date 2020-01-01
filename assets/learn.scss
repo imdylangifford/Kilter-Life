@@ -341,15 +341,15 @@
         margin: 0 auto;
         margin-top: 10px;
         & > div {
+            img {
+                filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(166deg) brightness(106%) contrast(105%);
+            }
             a {
-                background-color: white;
                 p {
-                    color: black;
+                    color: white;
                 }
 
-                img {
-                    filter: none;
-                }
+
             }
         }
     }
@@ -388,8 +388,10 @@
 }
 
 .c-quality--info {
+    background-color: #ede4d9;
     text-align: center;
     padding: 40px 20px;
+    min-height: 225px;
 
     h2 {
         font-size: 31px;
