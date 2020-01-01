@@ -18,12 +18,10 @@ var slideout = new Vue({
             this.pints = [];
             axios.get('/cart.js')
             .then(response => {
-                console.log(response, 'update cart')
                 this.total = response.data.total_price;
                 this.items = response.data.items;
                 this.price = response.data.total_price;
                 this.showSpinner = false;
-                console.log(this.items, 'items')
             })
         },
         formatCurrency: function (str) {
