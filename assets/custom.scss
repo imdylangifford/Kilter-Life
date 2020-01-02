@@ -149,9 +149,12 @@ button {
 }
 
 .fs-bar {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
     p {
+        padding: 12px 0px 5px 0px;
+        font-size: 32px;
+        font-weight: bold;
         line-height: 1.5em;
     }
 }
@@ -160,8 +163,10 @@ button {
     h2 {
         color: black;
     }
-    p {
-        color: black !important;
+    .header-nav {
+        p {
+            color: black !important;
+        }
     }
     img {
         filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(327deg) brightness(112%) contrast(100%);

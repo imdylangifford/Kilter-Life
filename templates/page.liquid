@@ -1,2 +1,36 @@
-<h1>{{ page.title }}</h1>
-<div>{{ page.content }}</div>
+<div class="c-page flex-c ai">
+    {{ page.content }}
+    {% include 'footer' %}
+</div>
+
+
+<style>
+.c-page {
+    min-height: 100vh;
+    background-color: #ede4d9;
+    padding-top: 100px;
+}
+
+
+.c-page > h2 {
+    color: black;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.c-page > p {
+    max-width: 800px;
+    color: black;
+    opacity: 0.6;
+    font-size: 24px;
+    text-align: center;
+    padding: 0px 20px;
+    line-height: 1.5em;
+    padding-bottom: 200px;
+}
+
+</style>
+
+<script>
+    $('.c-header').addClass('dark-header')
+</script>

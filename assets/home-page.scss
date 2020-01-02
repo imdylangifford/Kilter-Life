@@ -195,13 +195,21 @@
     }
 }
 
+.fs-bar {
+    background-color: black;
+
+    p {
+        font-family: 'Avenir';
+        color: white;
+    }
+}
+
 .c-header {
     position: absolute;
     justify-content: space-between;
     z-index: 200;
-    top: 20px;
+    top: 0px;
     width: 100%;
-    padding: 0px 25px;
     left: 0;
     box-sizing: border-box;
 
@@ -222,6 +230,10 @@
         max-width: 30px;
         align-self: center;
     }
+}
+
+.header-nav {
+    padding: 0px 25px;
 }
 
 #x {

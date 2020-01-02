@@ -15,9 +15,8 @@
     h2 {
         color: black;
     }
-    p {
-        color: black !important;
-    }
+
+
     img {
         filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(327deg) brightness(112%) contrast(100%);
     }
@@ -28,7 +27,7 @@
 }
 
 .c-shop--prod {
-    padding-top: 120px;
+    padding-top: 80px;
     padding-bottom: 60px;
     background-color: #ede4d9;
 
@@ -53,6 +52,7 @@
 .c-shop--whys {
     padding: 30px 25px;
     padding-top: 50px;
+    padding-bottom: 0px;
     box-sizing: border-box;
     background-color: white;
     width: 100%;
@@ -336,7 +336,23 @@
       margin-bottom: 10px;
       text-align: center;
       p {
+          font-size: 14px;
           line-height: 1.5em;
       }
   }
 
+.shop-learn-more {
+    background-color: white;
+    padding-bottom: 50px;
+
+    a {
+        background-color: #8a946c;
+        color: white;
+        padding: 20px 50px;
+        border-radius: 5px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
