@@ -94,10 +94,15 @@
 
 
 .c-shop--pr {
-    padding-top: 5px;
     flex-direction: column;
     a {
         color: black;
+    }
+
+    p {
+        span {
+        font-weight: bold;
+        }
     }
 
     .reviews {
@@ -119,6 +124,7 @@
 
 .spr-container {
     margin-top: 25px;
+    padding-top: 0px !important;
 }
 
 .spr-review-content-body {
@@ -126,23 +132,25 @@
 }
 
 .c-shop--prod-info {
-    margin-top: 20px;
+    margin-top: 10px;
 
     .c-shop--prod-info--title {
-        padding-top: 10px;
         font-size: 36px;
         font-weight: bold;
     }
 
     span {
-        padding: 0px 10px;
+        padding: 5px 10px;
+        padding-bottom: 0px;
     }
 }
+
+
 
 .c-shop--prod-info--desc {
     text-align: center;
     margin: 10px 0px;
-    max-width: 90%;
+    max-width: 85%;
     line-height: 30px;
 }
 
@@ -251,7 +259,7 @@
     padding-bottom: 30px;
 
     .slick-slide {
-        margin: 0px 15px;
+        margin: 0px 20px;
     }
 
     .slider-img-text {
@@ -333,6 +341,9 @@
       }
   }
 
+  .spr-summary {
+      line-height: 1.5em;
+  }
 
   .spr-container {
       border: none !important
