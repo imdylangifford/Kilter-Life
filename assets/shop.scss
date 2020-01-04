@@ -1,8 +1,8 @@
 .peace-accent {
-    background-color: #abbddd;
+    background-color: #99aac7;
 }
 .sleep-accent {
-    background-color: #ddb0a7;
+    background-color: #d3a79f;
 }
 .focus-accent {
     background-color: #eaad59;
@@ -157,10 +157,16 @@
     font-size: 20px;
     text-transform: uppercase;
     border-radius: 5px;
+    font-weight: bold;
 
-    opacity: 0.8;
     &:hover {
-        opacity: 1.0;
+        opacity: .8;
+    }
+}
+
+.spr-badge {
+    span {
+        color: black;
     }
 }
 
@@ -179,7 +185,7 @@
     padding: 10px 5px;
     border-radius: 5px;
     text-align: center;
-    opacity: 0.8;
+    opacity: 0.6;
     cursor: pointer;
 
     img {
