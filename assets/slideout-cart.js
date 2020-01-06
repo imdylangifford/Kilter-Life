@@ -22,6 +22,11 @@ var slideout = new Vue({
                 this.items = response.data.items;
                 this.price = response.data.total_price;
                 this.showSpinner = false;
+                if(this.items.length > 0) {
+                    $('.cart-button-number').html(`${this.items.length}`)
+                } else {
+                    $('.cart-button-number').html('')
+                }
             })
         },
         formatCurrency: function (str) {

@@ -121,7 +121,7 @@ html,body {
     background: white;
 
     img {
-        max-width: 50px;
+        max-width: 45px;
         align-self: center;
     }
 }
@@ -594,3 +594,14 @@ html,body {
   }
 
 
+
+
+  .cart-button {
+      position: relative;
+      p {
+          position: absolute;
+          top: 6px;
+          left: 13px;
+          font-size: 11px;
+      }
+  }
