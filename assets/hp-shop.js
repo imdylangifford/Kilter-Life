@@ -65,6 +65,21 @@ var shopPage = new Vue({
             }
             this.updateReviews()
         },
+        openSC: function(){
+            $('.slideout-cart-cover').addClass("slide-opacity-cover");
+            $('.c-slideout-cart').addClass("openCart");
+            $('.close-cart').css('display', 'block')
+            $('.c-cart--checkout').css('display', 'flex')
+            $('.cart-contents-wrapper').scrollTop(0)
+        
+            window.setTimeout(function(){
+              if(window.scrollY < 6) {
+                  window.scrollTo(0,10) 
+              } else {
+                  window.scrollTo(0,5) 
+              }
+            }, 401)
+        },
         addToCart: function(){
             axios.post('/cart/add.js', {
                 quantity: 1,
@@ -72,7 +87,7 @@ var shopPage = new Vue({
             })
             .then(response => {
                 slideout.updateCart();
-                openCart();
+                this.openSC();
             })
         },
         updateReviews: function(){

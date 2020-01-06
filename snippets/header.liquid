@@ -44,14 +44,31 @@ function closeNav() {
 
 
 function openCart() {
+  console.log('open the cart')
     $('.slideout-cart-cover').addClass("slide-opacity-cover");
     $('.c-slideout-cart').addClass("openCart");
     $('.close-cart').css('display', 'block')
+    $('.c-cart--checkout').css('display', 'flex')
+    fixCheckout();
 }
 function closeCart() {
     $('.slideout-cart-cover').removeClass("slide-opacity-cover");
     $('.c-slideout-cart').removeClass("openCart");
     $('.close-cart').css('display', 'none')
+    $('.c-cart--checkout').css('display', 'none')
+}
+
+function fixCheckout() {
+    var myDiv = document.getElementById('containerDiv');
+    myDiv.scrollTop = 0;
+
+    window.setTimeout(function(){
+      if(window.scrollY < 6) {
+          window.scrollTo(0,10) 
+      } else {
+          window.scrollTo(0,5) 
+      }
+    }, 401)
 }
 </script>
 

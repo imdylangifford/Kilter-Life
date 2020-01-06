@@ -3,18 +3,7 @@
 <div class="c-slideout-cart" id="slideout-cart">
     <div class="c-slideout-cart-wrap">
         <div onclick="closeCart()" class="close-cart">X</div>
-        <div v-if="items.length > 0" class="cart-contents-wrapper">
-            <div class="c-cart--checkout">
-                <div>
-                    <img class="secure"
-                        src="https://trustlock.co/wp-content/uploads/2019/01/guaranteed-safe-checkout-14.png" alt="">
-                    <div>
-                        <p><span>Shipping:</span> FREE🎉</p>
-                        <p><span>Subtotal:</span>${{ formatCurrency(total) }}</p>
-                    </div>
-                </div>
-                <a href="/checkout">Go To Checkout</a>
-            </div>
+        <div v-if="items.length > 0" class="cart-contents-wrapper" id="containerDiv">
             <div class="items-container">
                 <div class="c-item-block" v-for="(item, index) in items">
                     <div class="cart-item">
@@ -43,6 +32,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="c-cart--checkout">
+                <div>
+                    <img class="secure"
+                        src="https://trustlock.co/wp-content/uploads/2019/01/guaranteed-safe-checkout-14.png" alt="">
+                    <div>
+                        <p><span>Shipping:</span> FREE🎉</p>
+                        <p><span>Subtotal:</span>${{ formatCurrency(total) }}</p>
+                    </div>
+                </div>
+                <a href="/checkout">Go To Checkout</a>
             </div>
         </div>
         <div v-else class="cart-empty">

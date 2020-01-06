@@ -1,3 +1,7 @@
+html,body {
+    height: 100%;
+}
+
 .c-slideout-cart {
     height: 100%;
     width: 0%;
@@ -8,7 +12,7 @@
     top: 0;
     right: 0;
     background-color: white;
-    transition: 0.5s;
+    transition: 0.3s;
 
 
     .c-sc-bot {
@@ -467,13 +471,29 @@
       margin: 0px 250px;
   }
 
+  .items-container {
+      padding-bottom: 150px;
+  }
+
+  main {
+      position: relative;
+  }
+
+  .cart-contents-wrapper {
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+}
+
   .c-cart--checkout {
-      border-bottom: 1px solid black;
+      border-top: 1px solid black;
       display: flex;
       flex-direction: column;
       background-color: #fff;
-      width: 100%;
+      width: 80%;
       max-width: 600px;
+      position: fixed;
+      bottom: 0px;
 
       span {
           padding-bottom: 5px;
@@ -574,3 +594,5 @@
         }
     }
   }
+
+
