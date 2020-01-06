@@ -31,25 +31,12 @@
     background-color: #8a946c; 
     transition: 0.3s; 
 
-
     a:first-of-type {
-        color: white;
-        border-radius: 5px;
-        border: 1px solid white;
-        padding: 20px 40px;
-        margin-bottom: 50px;
-        max-width: 300px;
-        width: 80%;
-        text-align: center;
-        
-        &:hover {
-            color: #1F292B;
-            background-color: white;
-            text-decoration: none;
-        }
+        position: relative;
     }
 
-    a {
+
+    a,p {
         font-size: 28px;
         font-weight: bold;
         margin: 10px 0px;
@@ -57,18 +44,6 @@
         &:hover {
             text-decoration: underline;
         }
-    }
-
-    p {
-        max-width: 300px;
-        width: 80%;
-        font-size: 10px;
-        margin-top: 25px;
-        opacity: 0.8;
-    }
-
-    p:first-of-type {
-        padding-top: 20px;
     }
 
     & > div {
@@ -138,9 +113,9 @@
 }
 
 .c-hp--link-sleep {
-    border: 2px solid #ddb0a7;
+    border: 2px solid #d3a79f;
     &:hover {
-        background-color: #ddb0a7 !important;
+        background-color: #d3a79f !important;
     }
 }
 .c-hp--link-focus {
@@ -156,9 +131,9 @@
     }
 }
 .c-hp--link-peace {
-    border: 2px solid #abbddd;
+    border: 2px solid #8ba0c5;
     &:hover {
-        background-color: #abbddd !important;
+        background-color: #8ba0c5 !important;
     }
 }
 
@@ -301,4 +276,50 @@
             font-size: 18px;
         }
     }
+}
+
+.shop {
+    position: relative;
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        right: -25px;
+        top: 22px;
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid rgb(255, 255, 255);
+    }
+}
+
+
+.arrow-up {
+    border-left: 8px solid transparent !important;
+    border-right: 8px solid transparent !important;
+    border-top: none !important;
+    border-bottom: 8px solid rgb(255, 255, 255) !important;
+}
+ 
+.shop-options {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        cursor: pointer;
+        text-align: center;
+        width: 120px;
+        margin: 5px 10px;
+        padding: 10px;
+        border-radius: 5px;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.hide {
+    display: none !important
 }
